@@ -9,12 +9,96 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
     crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
+    crossorigin="anonymous">
     
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Save-A-Shot</title>
   </head>
 
   <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <h5 class="menu-text"><strong><em>Save-A-Shot</em></strong></h5>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu" >
+          <li><a href="#">About</a></li>
+          <li><a href="#">Get Started</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="main-title">
+      <div class="main-title-text">
+          <h1>Welcome to Save-A-Shot</h1>
+      </div>
+    </div>
+
+    
+    <div id ='mission' class="callout large primary ">
+      <h3>Our Mission</h3>
+      <p>While creating Save-A-Shot, we aimed for the interests on the individual in need. 
+          With the Coronavirus 2019 still running rampant, we wanted to provide the ability to search up information of 
+          the virus, dependent on the location you are in. Save-A-Shot was created so that you and your family may better 
+          be aware of the what is taking place in the pandemic, all around you.   </p>
+    </div>
+
+    <div id='services' class="callout large primary">
+      <h3>What We Provide</h3>
+      <p>Our services are that of many:
+        <ul>
+          <li>Information on how widespread the virus is in your area</li>
+          <li>Map locations of where clinics/hospitals that provide COVID 19 services may be found near you</li>
+          <li>Ability to seek out links of where a vaccination can be scheduled (CA residents only)</li>
+        </ul>
+        ...and much more!</p>
+    </div>
+
+    <div class="card" >
+      <div class="card-divider">
+        <h3>Let's Get Started!</h3>
+      </div>
+      <div class="card-section">
+        <form>
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="medium-6 cell">
+                <label>Enter Your City
+                  <input type="text" >
+                </label>
+              </div>
+              <div class="medium-6 cell">
+                <label>Enter Your State
+                  <input type="text" >
+                </label>
+              </div>
+            </div>
+            <button type='button' class='button small'>
+              <label>Submit</label>
+            </button>
+          </div>
+          
+          or ...
+        
+          <div class='grid-container'>
+            <div class='grid-x grid-padding-x'>
+              <label>
+                Enter Your Zip Code
+                <input class='cell' type="number" >
+              </label>
+            </div>
+            <button type='button' class='button small'>
+              <label>Submit</label>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='./assets/js/scheduler.js'></script>
