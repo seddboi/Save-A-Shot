@@ -2,13 +2,22 @@
     box-sizing: border-box;
 }
 
+body {
+    background: linear-gradient(#f7f5d9, #d1c027) fixed;
+}
+
 .top-bar {
+    background-color: #f0a647;
     border-radius: 10px;
     margin: 5px;
 }
 
+#menu {
+    background-color: #f0a647;
+}
+
 .main-title {
-    background: url("https://rekordeast.co.za/wp-content/uploads/sites/85/2017/05/cool-weather.jpeg") 50% no-repeat;
+    background: url("https://cdn.the-scientist.com/assets/articleNo/68059/hImg/40017/istock-1215208129-banner-l.png") 50% no-repeat;
     background-size: cover;
     height: 50vh;
     border-radius: 10px;
@@ -31,17 +40,27 @@
     text-shadow: 1px 1px 2px #0a0a0a;
 }
 
-#mission{
+#mission {
     margin-top: 16px;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 20px;
+    background-color: #f1ae57;
 }
 
-#services{
+#services {
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 20px;
+    background-color: #f3c07e;
+}
+
+#card-section {
+    background-color: #f1cfa3;
+}
+
+#form {
+    background-color: #f1cfa3;
 }
 
 

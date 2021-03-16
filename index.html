@@ -24,9 +24,9 @@
         <h5 class="menu-text"><strong><em>Save-A-Shot</em></strong></h5>
       </div>
       <div class="top-bar-right">
-        <ul class="menu" >
-          <li><a href="#">About</a></li>
-          <li><a href="#">Get Started</a></li>
+        <ul class="menu" id='menu'>
+          <li><a href="#mission">About</a></li>
+          <li><a href="#start-form">Get Started</a></li>
         </ul>
       </div>
     </div>
@@ -59,25 +59,25 @@
 
     <div class="card" >
       <div class="card-divider">
-        <h3>Let's Get Started!</h3>
+        <h3 id='start-form'>Let's Get Started!</h3>
       </div>
-      <div class="card-section">
-        <form>
+      <div class="card-section" id='card-section'>
+        <form id='form'>
           <div class="grid-container">
             <div class="grid-x grid-padding-x">
               <div class="medium-6 cell">
                 <label>Enter Your City
-                  <input type="text" >
+                  <input id ='city' type="text" >
                 </label>
               </div>
               <div class="medium-6 cell">
                 <label>Enter Your State
-                  <input type="text" >
+                  <input id='state' type="text" >
                 </label>
               </div>
             </div>
             <button type='button' class='button small'>
-              <label>Submit</label>
+              <a href='results.html'><label>Submit</label></a>
             </button>
           </div>
           
@@ -87,11 +87,11 @@
             <div class='grid-x grid-padding-x'>
               <label>
                 Enter Your Zip Code
-                <input class='cell' type="number" >
+                <input id='zipcode' class='cell medium-6' type="number" >
               </label>
             </div>
-            <button type='button' class='button small'>
-              <label>Submit</label>
+            <button href='results.html' type='button' class='button'>
+              <a href='results.html'><label>Submit</label></a>
             </button>
           </div>
         </form>
