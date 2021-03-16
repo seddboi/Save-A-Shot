@@ -8,17 +8,10 @@ var dataSet = function(url){
         if(response.ok){
             response.json().then(data => {
                 console.log(data)
-                // console.log(data.content.length)
-                console.log(data.content[1013]) // 3288
-                // console.log(data.content[3288]["Availability Info"][0])
-                // console.log(data.content[0].Address)
-                // console.log(data.content[0].Address.slice(-5))
                 var count = 0;
 
-                for(var i = 0; i < data.content.length; i++){ //change "10" to "data.content.length"
+                for(var i = 0; i < data.content.length; i++){
                     count++;
-                    
-                    // var code = data.content[i].Address.slice(-5);
                     var address = data.content[i].Address;
                     
                     if("Availability Info" in data.content[i]){
@@ -27,8 +20,10 @@ var dataSet = function(url){
                             getLocations(zip, address);
                         }
                     }
+                    else{
+                        continue;
+                    }
                 }
-                // console.log(count++);
             })
         }
         else{
@@ -37,13 +32,45 @@ var dataSet = function(url){
     })
 }
 
-// Need to find out why there is an error on the includes protion of this function.
 function getLocations(zipCode, address){
-    console.log("working1")
-    if(address.includes(zipCode)){
-        console.log("working2")
-        console.log(address)
+    try{
+        if(address.includes(zipCode)){//might need a function next here.
+            console.log(address)
+        }
+    }catch{
+        // need to add something since it returns undefined and might cause a problem later.
+        console.log("Error")
     }
 }
 
 dataSet(website);
+
+// Starting from here the maps api section is here.
+// keep this for now this is using google maps and for the map on the website
+// maybe use open street map instead
+
+// var script = document.createElement("script");
+// var mapArea = document.createElement("div");
+// var key = "AIzaSyAA56LyLz0Je0lF6xwbl9DLhzuI_QOurJM"
+// var mapsite = "https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap&libraries=&v=weekly"
+
+// mapArea.id = "map";
+// mapArea.style.height = "100%";
+// script.src = mapsite;
+
+// document.body.insertBefore(mapArea, document.body.firstChild)
+// document.body.appendChild(script);
+
+// let map;
+
+// function initMap() {
+//   map = new maps.Map(mapArea, {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// }
+
+// initMap();
+
+
+
