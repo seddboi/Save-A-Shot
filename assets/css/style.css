@@ -34,10 +34,22 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
 }
+
+#bottom-form {
+    background-color: #f0a647;
+    border: 1px solid#666;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 20px;
+}
+
+#card-divider {
+    background-color: #f0a647;
+}
   
 .main-title-text {
     color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
+    text-shadow: 3px 3px 7px #0a0a0a;
 }
 
 #mission {
@@ -48,11 +60,28 @@ body {
     background-color: #f1ae57;
 }
 
+#get-vaccinated-gif {
+    width: 300px;
+    height: auto;
+    border: 1px solid#666;
+    border-radius: 7px;
+}
+
 #services {
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 20px;
     background-color: #f3c07e;
+}
+#top-section-services {
+    margin-bottom: 40px;
+}
+
+#multi-vax-gif {
+    width: 350px;
+    height: auto;
+    border: 1px solid#666;
+    border-radius: 7px;
 }
 
 #card-section {
@@ -63,6 +92,9 @@ body {
     background-color: #f1cfa3;
 }
 
-
-
+#virus-gif {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
 
