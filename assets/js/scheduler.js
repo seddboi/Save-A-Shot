@@ -2,6 +2,7 @@
 
 var website = "https://api.vaccinateca.com/v1/locations.json"
 var zip = 92101;
+var myMap; 
 
 var dataSet = function(url){
     fetch(url).then(function(response){
@@ -9,21 +10,35 @@ var dataSet = function(url){
             response.json().then(data => {
                 console.log(data)
                 var count = 0;
+                var locat = {};
+
+                myMap = L.map('mapid').setView([data.content[1].Latitude, data.content[1].Longitude], 10)
 
                 for(var i = 0; i < data.content.length; i++){
                     count++;
                     var address = data.content[i].Address;
+                    var lat = data.content[i].Latitude;
+                    var long = data.content[i].Longitude;
+                    var name  = data.content[i].Name;
                     
                     if("Availability Info" in data.content[i]){
                         var available = data.content[i]["Availability Info"][0];
                         if(available.includes("Yes")){
-                            getLocations(zip, address);
+                            
+                                getLocations(zip, address, lat, long, name, locat);
+                            
+                            // console.log(lat)
+                            // console.log(long)
+                            // console.log(name)
+                           
+                            
                         }
                     }
                     else{
                         continue;
                     }
                 }
+                console.log(locat)
             })
         }
         else{
@@ -32,45 +47,72 @@ var dataSet = function(url){
     })
 }
 
-function getLocations(zipCode, address){
+function getLocations(zipCode, address, lat, long, name, arr){
     try{
-        if(address.includes(zipCode)){//might need a function next here.
-            console.log(address)
+        if(address) {
+            if(address.includes(zipCode)){//might need a function next here.
+                console.log(address)
+                drawMap(lat, long, name)
+                arr[name] = {};
+                arr[name]["Address"] = address;
+                arr[name]["Latitude"] = lat;
+                arr[name]["Longitude"] = long;
+                n = false;
+            }
+        } else {
+            console.log("this location does not have an address")
         }
-    }catch{
-        // need to add something since it returns undefined and might cause a problem later.
-        console.log("Error")
+
+    }catch(e){
+        console.log("Error", e)
+        console.log("paramets, ", zipCode, address, lat, long, name, arr)
     }
 }
 
-dataSet(website);
+dataSet(website);// event listener is going to be need to call thsi when someone searchs zipcode.
 
 // Starting from here the maps api section is here.
-// keep this for now this is using google maps and for the map on the website
-// maybe use open street map instead
 
-// var script = document.createElement("script");
-// var mapArea = document.createElement("div");
-// var key = "AIzaSyAA56LyLz0Je0lF6xwbl9DLhzuI_QOurJM"
-// var mapsite = "https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap&libraries=&v=weekly"
+function drawMap(lat, long, name){
+    console.log("working")
+    //var mymap = L.map('mapid').setView([lat, long], 10);//51.505, -0.09], 13);
 
-// mapArea.id = "map";
-// mapArea.style.height = "100%";
-// script.src = mapsite;
+    L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    ).addTo(myMap);
 
-// document.body.insertBefore(mapArea, document.body.firstChild)
-// document.body.appendChild(script);
+    console.log("name is", name)
 
-// let map;
+    
+    try {
+        L.marker([lat, long], { title : "asdf"}).addTo(myMap);
+    } catch(e) {
+        console.log("error creating marker", e)
+    }
 
-// function initMap() {
-//   map = new maps.Map(mapArea, {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//   });
-// }
+    //const latlong = L.LatLng(lat, long)
+    
+    //var latlng = new L.LatLng(lat, long, 200)
 
-// initMap();
+
+    // var lonLat = new OpenLayers.LonLat(lat ,long)
+    //       .transform(
+    //         new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+    //         map.getProjectionObject() // to Spherical Mercator Projection
+    //     );
+    
+    // var marker = new OpenLayer.Layer.Marker("mark");
+    // mymap.addLayer(marker)
+    // marker.addMarker(new OpenLayer.Marker(lonLat));
+    // mymap.setCenter(lonLat, 10)
+
+}
+
+function addMarkers(obj){
+
+}
+
+
 
 
 
