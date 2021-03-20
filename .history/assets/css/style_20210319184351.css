@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(222deg, #61616b, #7d8b7a, #84a480, #86b880) fixed;
+    -webkit-animation: dark-animator 18s ease infinite;
+    -moz-animation: dark-animator 18s ease infinite;
+    -o-animation: dark-animator 18s ease infinite;
+    animation: dark-animator 18s ease infinite;
+}
+
+@-webkit-keyframes dark-animator {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes dark-animator {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-o-keyframes dark-animator {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes dark-animator {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+.top-bar {
+    background-color: #f0a647;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#menu {
+    background-color: #f0a647;
+}
+
+.main-title {
+    background: url("https://cdn.the-scientist.com/assets/articleNo/68059/hImg/40017/istock-1215208129-banner-l.png") 50% no-repeat;
+    background-size: cover;
+    height: 50vh;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#bottom-form {
+    background-color: #f0a647;
+    border: 1px solid#666;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#card-divider {
+    border-bottom: 1px solid #666;
+}
+
+#card-divider {
+    background-color: #f0a647;
+}
+  
+.main-title-text {
+    color: #fefefe;
+    text-shadow: 3px 3px 7px #0a0a0a;
+}
+
+#mission {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #f1ae57;
+}
+
+#get-vaccinated-gif {
+    width: 300px;
+    height: auto;
+    border: 1px solid#666;
+    border-radius: 7px;
+}
+
+#services {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #f3c07e;
+}
+#top-section-services {
+    margin-bottom: 40px;
+}
+
+#multi-vax-gif {
+    width: 40%;
+    height: 40%;
+    border: 1px solid#666;
+    border-radius: 7px;
+}
+
+#card-section {
+    background-color: #f1cfa3;
+}
+
+#form {
+    background-color: #f1cfa3;
+}
+
+#virus-gif {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+

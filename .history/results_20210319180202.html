@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
+    crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./assets/css/scheduler.css" />
+    <title>Save-A-Shot</title>
+  </head>
+
+  <body>
+    <div class='top-bar'>
+        <div class='top-bar-left'>
+            <h5><em>Save-A-Shot</em></h5>
+        </div>
+        
+        <div class='top-bar-right'>
+            <button type='button' class='button small'><a href='index.html'><label>Go Back</label></a></button>
+        </div>
+    </div>
+    <div class='grid-container'>
+        <div class='grid-x grid-margin-x'>
+            <div class='cell' id='api-location-results'>
+                <h4 class='text-center'>Here are the closest locations near <span id='city'></span> ,<span id='state'></span> :</h4>
+                <ul id='list-of-results' class='text-center'>
+                    <li>der</li>
+                    <li>over der</li>
+                    <li>ober der</li>
+                    <li>over wer</li>
+                </ul>
+                <div id='map' class='callout primary'></div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+    <script src='./assets/js/scheduler.js'></script>
+  </body>

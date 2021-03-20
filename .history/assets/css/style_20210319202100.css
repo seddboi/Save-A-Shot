@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(380deg, #404046, #6f7a6c, #84a480, #86b880) ;
+}
+
+.top-bar {
+    background-image: radial-gradient(circle at center center, rgb(130,130,130),rgb(35,35,35));
+    border: 5px outset rgb(128, 128, 128);
+    color: #ffffff;
+    border-radius: 10px;;
+    margin: 5px;
+}
+
+#menu {
+    background-color: transparent;
+}
+
+.top-bar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.main-title {
+    background: url("https://cdn.the-scientist.com/assets/articleNo/68059/hImg/40017/istock-1215208129-banner-l.png") 50% no-repeat;
+    background-size: cover;
+    height: 50vh;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#bottom-form {
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));    border: 1px solid#666;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 4px solid #7a8677;
+    border-radius: 20px;
+}
+
+#card-divider {
+    border-bottom: 1px solid #6f7a6c;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+}
+  
+.main-title-text {
+    color: #fefefe;
+    text-shadow: 3px 3px 7px #0a0a0a;
+}
+
+#mission {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 4px solid #7a8677;
+    border-radius: 20px;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+}
+
+#get-vaccinated-gif {
+    width: 300px;
+    height: auto;
+    border: 1px solid#666;
+    border-radius: 7px;
+}
+
+#services {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 4px solid #7a8677;
+    border-radius: 20px;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+}
+
+#top-section-services {
+    margin-bottom: 40px;
+}
+
+#multi-vax-gif {
+    width: 40%;
+    height: 40%;
+    border: 1px solid#666;
+    border-radius: 7px;
+}
+
+#card-section {
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+}
+
+#form {
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+}
+
+#virus-gif {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+

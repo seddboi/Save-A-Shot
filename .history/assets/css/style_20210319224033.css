@@ -3,7 +3,6 @@
 }
 
 body {
-    /* Gradient taken from https://www.gradientmagic.com/collection/standard */
     background-image: linear-gradient(185deg, rgb(51, 138, 249),rgb(47, 248, 255));
 }
 
@@ -12,7 +11,7 @@ body {
     border: 2px outset rgb(128, 128, 128);
     color: #ffffff;
     border-radius: 10px;;
-    margin: 10px;
+    margin: 5px;
 }
 
 #menu {
@@ -73,7 +72,7 @@ body {
     border: 2px solid #666;
     border-radius: 20px;
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
-    transition: 0.2s all ease-in-out;
+    transition: 0.5s all ease-in-out;
 }
 
 #mission:hover {
@@ -94,7 +93,7 @@ body {
     border: 2px solid #666;
     border-radius: 20px;
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
-    transition: 0.2s all ease-in-out;
+    transition: 0.5s all ease-in-out;
 }
 
 #services:hover {
@@ -112,84 +111,12 @@ body {
     border-radius: 7px;
 }
 
-#bottom-form {
-    transition: 0.2s all ease-in-out;
-}
-
-#bottom-form:hover {
-    transform: scale(1.02);
-}
-
 #card-section {
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
 }
 
 #form {
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
-}
-
-/* Button Effects taken from https://codepen.io/kocsten/pen/rggjXp */
-#glow-on-hover {
-    width: 150px;
-    height: 40px;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    background: #000;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-#button-text {
-    color: #ffffff;
-}
-
-#glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-#glow-on-hover:active {
-    color: #ffffff;
-}
-
-#glow-on-hover:active:after {
-    background: transparent;
-}
-
-#glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-#glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
 }
 
 #virus-gif {
