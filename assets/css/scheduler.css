@@ -82,6 +82,25 @@ body {
     color: #ffffff;  
 }
 
+#list-of-states {
+    background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+    border: 1px solid rgb(128, 128, 128);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#state-button {
+    background-color:transparent;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#state-button:hover {
+    outline: #ffffff solid 4px;
+    outline-style: double;
+}
+
 #main-section {
     margin-left: 20px;
     margin-right: 20px;
@@ -114,7 +133,50 @@ body {
 
 #y-take-it:hover {
     transform: scale(1.02);
-
 }
 
+#helpful-links {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 2px solid #666;
+    border-radius: 20px;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+    transition: 0.2s all ease-in-out;
+}
 
+#helpful-links:hover {
+    transform: scale(1.02);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0; 
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+#vaccine-available {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 2px solid #666;
+    border-radius: 20px;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
+    transition: 0.2s all ease-in-out;
+}
+
+#vaccine-available:hover {
+    transform: scale(1.02);
+}
+
+#v-finder {
+    text-decoration: none;
+    color: #ffffff;
+}
