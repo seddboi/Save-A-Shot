@@ -3,7 +3,6 @@
 }
 
 body {
-    /* Gradient taken from https://www.gradientmagic.com/collection/standard */
     background-image: linear-gradient(185deg, rgb(51, 138, 249),rgb(47, 248, 255));
 }
 

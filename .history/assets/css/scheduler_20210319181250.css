@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: linear-gradient(0deg, rgba(71, 224, 17, 0.15) 0%,rgba(159, 153, 81, 0.15) 100%),linear-gradient(90deg, rgb(5, 10, 46),#f0a647);
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
 }
 .top-bar {
     border: 1px solid#666;

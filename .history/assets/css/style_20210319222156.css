@@ -3,16 +3,15 @@
 }
 
 body {
-    /* Gradient taken from https://www.gradientmagic.com/collection/standard */
-    background-image: linear-gradient(185deg, rgb(51, 138, 249),rgb(47, 248, 255));
+    background: linear-gradient(380deg, #404046, #6f7a6c, #84a480, #86b880) fixed 100%;
 }
 
 .top-bar {
-    background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+    background-image: radial-gradient(circle at center center, rgb(228, 228, 228),rgb(35,35,35));
     border: 2px outset rgb(128, 128, 128);
     color: #ffffff;
     border-radius: 10px;;
-    margin: 10px;
+    margin: 5px;
 }
 
 #menu {
@@ -49,16 +48,13 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-    border: 2px solid #666;
+    border: 4px double #7a8677;
     border-radius: 20px;
 }
 
 #card-divider {
-    border-bottom: 2px solid #666;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
-    color: #ffffff;
+    border-bottom: 1px solid #000000;
+    background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
 }
   
 .main-title-text {
@@ -73,11 +69,6 @@ body {
     border: 2px solid #666;
     border-radius: 20px;
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
-    transition: 0.2s all ease-in-out;
-}
-
-#mission:hover {
-    transform: scale(1.02);
 }
 
 #get-vaccinated-gif {
@@ -94,11 +85,6 @@ body {
     border: 2px solid #666;
     border-radius: 20px;
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
-    transition: 0.2s all ease-in-out;
-}
-
-#services:hover {
-    transform: scale(1.02);
 }
 
 #top-section-services {
@@ -112,14 +98,6 @@ body {
     border-radius: 7px;
 }
 
-#bottom-form {
-    transition: 0.2s all ease-in-out;
-}
-
-#bottom-form:hover {
-    transform: scale(1.02);
-}
-
 #card-section {
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
 }
@@ -127,8 +105,6 @@ body {
 #form {
     background-image: repeating-linear-gradient(315deg, rgba(134,134,134, 0.1) 0px, rgba(134,134,134, 0.1) 2px,transparent 2px, transparent 4px),linear-gradient(270deg, rgb(216,216,216),rgb(216,216,216));
 }
-
-
 
 #virus-gif {
     width: 80px;
