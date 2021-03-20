@@ -25,22 +25,81 @@
       </div>
       
       <div class='top-bar-right'>
-          <button id='glow-on-hover' type='button'><a id='button' href='index.html'><label id='button-text'>Go Back</label></a></button>
+          <button id='glow-on-hover' type='button'><a href='index.html'><label id='button-text'>Go Back</label></a></button>
       </div>
   </div>
 
-  <div class='callout'>
+  <div id='vaccine-available'class='callout'>
     <h4>Where can I get an appointment?</h4>
-    <p>&emsp;The Vaccine Finder Organization has a great all-in-one place to find available vaccinations within your zipcode ---->
-      <a href='https://vaccinefinder.org/search/'>Vaccine Finder</a>
-    </p>
-    <h4>- Or -</h4>
-    <p>&emsp;Select your state below to get linked to its vaccination portal </p>
-    <button type="button">
-      <ul class='dropdown menu'>
-        <li><a href=''>Alabama</a></li>
-      </ul>
-    </button>
+    <p>&emsp;The Vaccine Finder Organization has a great all-in-one place to find available vaccinations within your zipcode </p>
+    <button id='glow-on-hover' type='button'><a id='v-finder'  href='https://vaccinefinder.org/search/'>Vaccine Finder</a></button>
+    <h4> Or</h4>
+    <p>&emsp;Select your State/Territory below to get linked to its vaccination portal </p>
+    <ul id='list-of-states' class="dropdown menu" data-dropdown-menu>
+        <ul class="menu grid-x align-center">
+          <li><a id='state-button' href='https://alcovidvaccine.gov/'>Alabama</a></li>
+          <li><a id='state-button' href ='https://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/VaccineInfo.aspx'>Alaska</a></li>
+          <li><a id='state-button' href ='https://www.americansamoa.gov/'>American Samoa</a></li>
+          <li><a id='state-button' href ='https://azdhs.gov/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/index.php#novel-coronavirus-find-vaccine'>Arizona</a></li>
+          <li><a id='state-button' href ='https://www.healthy.arkansas.gov/programs-services/topics/covid-19-vaccination-plan'>Arkansas</a></li>
+          <li><a id='state-button' href ='https://myturn.ca.gov/'>California</a></li>
+          <li><a id='state-button' href ='https://covid19.colorado.gov/for-coloradans/vaccine/where-can-i-get-vaccinated'>Colorado</a></li>
+          <li><a id='state-button' href ='https://portal.ct.gov/Coronavirus/covid-19%20vaccinations'>Connecticut</a></li>
+          <li><a id='state-button' href ='https://coronavirus.delaware.gov/vaccine/where-can-i-get-my-vaccine/'>Delaware</a></li>
+          <li><a id='state-button' href ='https://coronavirus.dc.gov/vaccinatedc'>District of Columbia</a></li>
+          <li><a id='state-button' href ='https://floridahealthcovid19.gov/vaccines/vaccine-locator/'>Florida</a></li>
+          <li><a id='state-button' href ='https://dph.georgia.gov/covid-vaccine'>Georgia</a></li>
+          <li><a id='state-button' href ='https://dphss.guam.gov/covid-19-vaccinations/'>Guam</a></li>
+          <li><a id='state-button' href ='https://hawaiicovid19.com/vaccine/'>Hawaii</a></li>
+          <li><a id='state-button' href ='https://healthandwelfare.idaho.gov/covid-19-vaccination'>Idaho</a></li>
+          <li><a id='state-button' href ='https://coronavirus.illinois.gov/s/vaccination-location'>Illinois</a></li>
+          <li><a id='state-button' href ='https://www.coronavirus.in.gov/vaccine/index.htm'>Indiana</a></li>
+          <li><a id='state-button' href ='https://coronavirus.iowa.gov/pages/vaccineinformation'>Iowa</a></li>
+          <li><a id='state-button' href ='https://www.kansasvaccine.gov/160/Find-My-Vaccine'>Kansas</a></li>
+          <li><a id='state-button' href ='https://govstatus.egov.com/kentucky-vaccine-map'>Kentucky</a></li>
+          <li><a id='state-button' href ='https://ldh.la.gov/covidvaccine-locations/'>Louisiana</a></li>
+          <li><a id='state-button' href ='https://www.maine.gov/covid19/vaccines/vaccination-sites'>Maine</a></li>
+          <li><a id='state-button' href ='https://coronavirus.maryland.gov/pages/vaccine'>Maryland</a></li>
+          <li><a id='state-button' href ='http://rmihealth.org/'>Marshall Islands</a></li>
+          <li><a id='state-button' href ='https://www.mass.gov/info-details/covid-19-vaccine-locations-for-individuals-currently-eligible-to-be-vaccinated'>Massachusetts</a></li>
+          <li><a id='state-button' href ='https://www.michigan.gov/coronavirus/0,9753,7-406-98178_103214_104822---,00.html'>Michigan</a></li>
+          <li><a id='state-button' href ='https://www.fsmgov.org/index.html'>Micronesia</a></li>
+          <li><a id='state-button' href ='https://mn.gov/covid19/vaccine/find-vaccine/index.jsp'>Minnesota</a></li>
+          <li><a id='state-button' href ='https://covidvaccine.umc.edu/'>Mississippi</a></li>
+          <li><a id='state-button' href ='https://covidvaccine.mo.gov/map/'>Missouri</a></li>
+          <li><a id='state-button' href ='https://dphhs.mt.gov/publichealth/cdepi/diseases/coronavirusmt/covid19vaccineavailability'>Montana</a></li>
+          <li><a id='state-button' href ='https://dhhs.ne.gov/Pages/FinishStrong.aspx'>Nebraska</a></li>
+          <li><a id='state-button' href ='https://www.immunizenevada.org/county-specific-covid-19-vaccine-plan'>Nevada</a></li>
+          <li><a id='state-button' href ='https://www.vaccines.nh.gov/'>New Hampshire</a></li>
+          <li><a id='state-button' href ='https://covid19.nj.gov/pages/vaccine'>New Jersey</a></li>
+          <li><a id='state-button' href ='https://cv.nmhealth.org/covid-vaccine/'>New Mexico</a></li>
+          <li><a id='state-button' href ='https://covid19vaccine.health.ny.gov/'>New York</a></li>
+          <li><a id='state-button' href ='https://covid19.ncdhhs.gov/findyourspot'>North Carolina</a></li>
+          <li><a id='state-button' href ='https://www.health.nd.gov/covidvaccinelocator'>North Dakota</a></li>
+          <li><a id='state-button' href ='https://www.vaccinatecnmi.com/'>Northern Mariana Islands</a></li>
+          <li><a id='state-button' href ='https://vaccine.coronavirus.ohio.gov/'>Ohio</a></li>
+          <li><a id='state-button' href ='https://vaccinate.oklahoma.gov/'>Oklahoma</a></li>
+          <li><a id='state-button' href ='https://www.oregon.gov/oha/covid19/Pages/vaccine-information-by-county.aspx'>Oregon</a></li>
+          <li><a id='state-button' href ='http://www.palauhealth.org/'>Palau</a></li>
+          <li><a id='state-button' href ='https://www.health.pa.gov/topics/disease/coronavirus/Pages/Vaccine.aspx'>Pennsylvania</a></li>
+          <li><a id='state-button' href ='https://www.vacunatepr.com/covid-19'>Puerto Rico</a></li>
+          <li><a id='state-button' href ='https://covid.ri.gov/vaccination'>Rhode Island</a></li>
+          <li><a id='state-button' href ='https://scdhec.gov/covid19/covid-19-vaccine/covid-19-vaccine-appointments'>South Carolina</a></li>
+          <li><a id='state-button' href ='https://doh.sd.gov/COVID/Vaccine/ProviderMap/default.aspx'>South Dakota</a></li>
+          <li><a id='state-button' href ='https://covid19.tn.gov/stay-informed/blogs/tdh-county-health-departments-offer-covid-19-vaccination-by-appointment/'>Tennessee</a></li>
+          <li><a id='state-button' href ='https://www.dshs.state.tx.us/coronavirus/immunize/vaccine-hubs.aspx'>Texas</a></li>
+          <li><a id='state-button' href ='https://coronavirus.utah.gov/vaccine/'>Utah</a></li>
+          <li><a id='state-button' href ='https://www.covid19usvi.com/vaccines'>U.S. Virgin Islands</a></li>
+          <li><a id='state-button' href ='https://www.healthvermont.gov/covid-19/vaccine/getting-covid-19-vaccine'>Vermont</a></li>
+          <li><a id='state-button' href ='https://www.vdh.virginia.gov/covid-19-vaccine/'>Virginia</a></li>
+          <li><a id='state-button' href ='https://www.doh.wa.gov/Emergencies/COVID19/vaccine'>Washington</a></li>
+          <li><a id='state-button' href ='https://dhhr.wv.gov/COVID-19/Pages/Vaccine.aspx'>West Virginia</a></li>
+          <li><a id='state-button' href ='https://www.dhs.wisconsin.gov/covid-19/vaccine-get.htm'>Wisconsin</a></li>
+          <li><a id='state-button' href ='https://health.wyo.gov/publichealth/immunization/wyoming-covid-19-vaccine-information/county-covid-19-vaccine-information/'>Wyoming</a></li>
+
+        </ul>
+      
+    </ul>
   </div>
 
   <div id="y-take-it" class='callout'>
@@ -56,7 +115,7 @@
                 <li><a href='https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-vaccine/art-20484859'>" COVID-19 Vaccines: Get the facts " (MAYO Clinic)</a></li>
             </ul>
         </p>
-        <h5>Here's a short informational video from the CDC on COVID-19 Vaccine Safety</h5>
+        <h5 class='text-center'>Here's a short informational video from the CDC on COVID-19 Vaccine Safety</h5>
         <div class='video-container grid-x align-center'>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6Wqk2CrMrh8" frameborder="3" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -77,5 +136,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>$(document).foundation()</script>
     <script src='./assets/js/scheduler.js'></script>
   </body>
