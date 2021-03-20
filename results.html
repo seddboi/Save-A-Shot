@@ -21,14 +21,14 @@
   <body>
     <div class='top-bar'>
         <div class='top-bar-left'>
-            <h5><em>Save-A-Shot</em></h5>
+            <h5><strong>Save-A-Shot</strong></h5>
         </div>
         
         <div class='top-bar-right'>
-            <button type='button' class='button small'><a href='index.html'><label>Go Back</label></a></button>
+            <button id='glow-on-hover' type='button'><a id='button' href='index.html'><label id='button-text'>Go Back</label></a></button>
         </div>
     </div>
-    <div class='grid-container'>
+    <div id='main-section' class='callout large'>
         <div class='grid-x grid-margin-x'>
             <div class='cell' id='api-location-results'>
                 <h4 class='text-center'>Here are the closest locations near <span id='city'></span> ,<span id='state'></span> :</h4>
@@ -40,6 +40,22 @@
                 </ul>
                 <div id='map' class='callout primary'></div>
             </div>
+        </div>
+    </div>
+
+    <div id="y-take-it" class='callout'>
+        <div class='grid-y grid-margin-y'>
+            <h4> Why Take the Vaccine?</h4>
+            <p>&emsp;Despite being nearly brand new, the vaccine serves as the crux between a failing society and an increasingly more healthy one. In our case here in the United States, we have failed tremendously at slowing the spread of the Coronavirus. With various political and social issues taking place within the past year (2020), the spread of the Coronavirus was given a free pass to run rampant, placing hardships around every family. Thus, the vaccine serves as our tool to reach the initial healthy environment we remember at the start of 2020.</p>
+            <h5>How safe is it?</h5>
+            <p>&emsp;Despite the vaccine's seemingly rushed production, it has been described by the CDC and the FDA that this vaccine is as safe as any other cold or flu vaccine that you could take currently. Both vaccine responses provided from Pfizer and Moderna has been tested in large clinical assessments, in order for the FDA to even consider approving emergency use. Furthermore, the vaccine is said to have "vastly" greater benefits which outweigh any possible risks that taking the vaccine would result in (Gavi.org). For more information, here are some more links to articles that you may follow, from trusted organizations around the world:  
+                <ul>
+                    <li><a href='https://www.gavi.org/vaccineswork/how-safe-are-covid-19-vaccines?gclid=Cj0KCQjwutaCBhDfARIsAJHWnHvBufiMRTddSClHpJ-UAjN01AgzstrSdjmTIMOjGUYV-DGtED7YPkYaAl9uEALw_wcB'>" How Safe Are COVID-19 Vaccines? " (Gavi, The Vaccination Alliance)</a></li>
+                    <li><a href='https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/is-the-covid19-vaccine-safe'>" Is the COVID-19 Vaccine Safe? " (Johns Hopkins Medicine)</a></li>
+                    <li><a href='https://www.health.harvard.edu/blog/covid-19-vaccines-safety-side-effects-and-coincidence-2021020821906'>" COVID-19 Vaccines: Safety, side effects -- and coincidence " (Harvard Health Publishing)</a></li>
+                    <li><a href='https://www.mayoclinic.org/diseases-conditions/coronavirus/in-depth/coronavirus-vaccine/art-20484859'>" COVID-19 Vaccines: Get the facts " (MAYO Clinic)</a></li>
+                </ul>
+            </p>
         </div>
     </div>
     
