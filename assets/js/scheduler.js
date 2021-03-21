@@ -8,23 +8,24 @@ var stateName = document.getElementById("stateName");
 
 var website = "https://api.vaccinateca.com/v1/locations.json";
 var myMap; 
-var zip = 92101;
-var cityN = "Riverside";
-var state = "California";
+// var zip = 92101;
+// var cityN = "Riverside";
+// var state = "California";
 
-var dataSet = function(url, city, state){
+var dataSet = function(url){
     fetch(url).then(function(response){
         if(response.ok){
             response.json().then(data => {
-                var count = 0;
                 var locat = {};
+                var cs = JSON.parse(localStorage.getItem("cityState"));
+                var city = cs.city;
+                var state = cs.state;
 
                 myMap = L.map('map').setView([data.content[1].Latitude, data.content[1].Longitude], 10)
                 cityName.innerHTML = city;
                 stateName.innerHTML = state;
 
                 for(var i = 0; i < data.content.length; i++){
-                    count++;
                     var address = data.content[i].Address;
                     var lat = data.content[i].Latitude;
                     var long = data.content[i].Longitude;
@@ -33,7 +34,7 @@ var dataSet = function(url, city, state){
                     if("Availability Info" in data.content[i]){
                         var available = data.content[i]["Availability Info"][0];
                         if(available.includes("Yes")){
-                            getLocations(zip, address, lat, long, name, locat, city, state);
+                            getLocations(address, lat, long, name, locat, city, state);
                         }
                     }
                     else{
@@ -48,7 +49,7 @@ var dataSet = function(url, city, state){
     })
 }
 
-function getLocations(zipCode, address, lat, long, name, arr, city, state){
+function getLocations(address, lat, long, name, arr, city, state){
     try{
         if(address) {
             cityL = city.toLowerCase();
@@ -68,7 +69,7 @@ function getLocations(zipCode, address, lat, long, name, arr, city, state){
 
     }catch(e){
         console.log("Error", e)
-        console.log("paramets, ", zipCode, address, lat, long, name, arr)
+        console.log("paramets, ", address, lat, long, name, arr)
     }
 }
 
@@ -93,10 +94,11 @@ function drawMap(lat, long, name, address){
     }
 }
 
-// working on this the value isn't arrpearing correctly it returns null
-document.addEventListener("DOMContentLoaded", function(){
-    dataSet(website, cityInput.value, stateInput.value)
+submit.addEventListener("click", function(){
+    localStorage.setItem("cityState", JSON.stringify({"city":cityInput.value, "state":stateInput.value}))
+})
 
-}, false)
-
+window.addEventListener("load", function(){
+    dataSet(website)
+})
 
