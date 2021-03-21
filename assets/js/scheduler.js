@@ -12,7 +12,6 @@ var myMap;
 // var cityN = "Riverside";
 // var state = "California";
 
-<<<<<<< HEAD
 $(document).ready(function() {
     $('#button').on('click', function(event){
         var stateSearch = stateInput.val();
@@ -25,10 +24,7 @@ $(document).ready(function() {
     })
 })
 
-var dataSet = function(url, city, state){
-=======
 var dataSet = function(url){
->>>>>>> 612cc7123e25d88ad8428235fa67a90af1c68dd0
     fetch(url).then(function(response){
         if(response.ok){
             response.json().then(data => {
