@@ -5,6 +5,7 @@ var stateInput = document.getElementById("state");
 var mapId = document.getElementById("map")
 var cityName = document.getElementById("cityName");
 var stateName = document.getElementById("stateName");
+var namesOfStates = ['alabama','alaska', 'american samoa', 'arizona', 'arkansas', 'colorado', 'connecticut', 'delaware', 'district of columbia', 'florida', 'georgia', 'guam', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'marshall islands', 'massachusetts', 'michigan', 'micronesia', 'minnesota', 'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'northern mariana islands', 'ohio', 'oklahoma', 'oregon', 'palau', 'pennsylvania', 'puerto rico', 'rhode island', 'south carolina', 'south dakota', 'tennessee', 'texas', 'utah', 'us virgin islands','u.s. virgin islands', 'virgin islands', 'vermont', 'virginia', 'washington', 'west Virginia', 'wisconsin', 'wyoming'];
 
 var website = "https://api.vaccinateca.com/v1/locations.json";
 var myMap; 
@@ -12,17 +13,20 @@ var myMap;
 // var cityN = "Riverside";
 // var state = "California";
 
-$(document).ready(function() {
-    $('#button').on('click', function(event){
-        var stateSearch = stateInput.val();
-        stateSearch = stateSearch.toUppercase();
-        console.log(stateSearch);
+$('#button').on('click', function(event){
+    var stateSearch = $('#state').val().toLowerCase();
+    var arrayCheck = namesOfStates.includes(stateSearch);
+    console.log(arrayCheck);
 
-        if (stateSearch !== 'CALIFORNIA') {
-            $('#button').attr('href','scheduler.html' )
-        }
-    })
-})
+
+    if (!arrayCheck && stateSearch=='california') {
+        $('#button').attr('href','results.html' );
+    } else if (arrayCheck) {
+        $('#button').attr('href', 'scheduler.html');
+    } else {
+        alert('Please enter a valid State/Territory');
+    }
+});
 
 var dataSet = function(url){
     fetch(url).then(function(response){
@@ -110,7 +114,7 @@ submit.addEventListener("click", function(){
     localStorage.setItem("cityState", JSON.stringify({"city":cityInput.value, "state":stateInput.value}))
 })
 
-window.addEventListener("load", function(){
-    dataSet(website)
-})
+// window.addEventListener("load", function(){
+//     dataSet(website)
+// })
 
