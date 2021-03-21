@@ -12,6 +12,18 @@ var zip = 92101;
 var cityN = "Riverside";
 var state = "California";
 
+$(document).ready(function() {
+    $('#button').on('click', function(event){
+        var stateSearch = stateInput.val();
+        stateSearch = stateSearch.toUppercase();
+        console.log(stateSearch);
+
+        if (stateSearch !== 'CALIFORNIA') {
+            $('#button').attr('href','scheduler.html' )
+        }
+    })
+})
+
 var dataSet = function(url, city, state){
     fetch(url).then(function(response){
         if(response.ok){
