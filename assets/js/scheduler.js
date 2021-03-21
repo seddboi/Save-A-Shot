@@ -13,11 +13,11 @@ var myMap;
 // var cityN = "Riverside";
 // var state = "California";
 
+// added a button trigger, which tests the validity of the state entry, which will lead to either the main results page, 
+// the outside of california resident scheduler.thml page, or gives off an alert for a false state
 $('#button').on('click', function(event){
     var stateSearch = $('#state').val().toLowerCase();
     var arrayCheck = namesOfStates.includes(stateSearch);
-    console.log(arrayCheck);
-
 
     if (!arrayCheck && stateSearch=='california') {
         $('#button').attr('href','results.html' );
