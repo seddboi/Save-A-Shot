@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Here we have our header, which provides cdn references to the Foundation framework, and Leaflet, which gives us our map-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-    crossorigin="anonymous"
-    />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
@@ -25,6 +21,8 @@
   </head>
 
   <body>
+    <!-- This is the section formatted for the 'top-bar' which is essentially the nav bar -->
+    <!-- It is very similar to the other 'top-bars' from the other html pages -->
     <div class="top-bar">
       <div class="top-bar-left">
         <h5 class="menu-text"><strong>Save-A-Shot</strong></h5>
@@ -38,13 +36,14 @@
       </div>
     </div>
     
+    <!-- This formats the Center text/photo background that has Save-A-Shot in the center -->
     <div class="main-title">
       <div class="main-title-text">
           <h1>Welcome to <br /><strong>Save-A-Shot</strong></h1>
       </div>
     </div>
 
-    
+    <!-- This formats the "mission' statement section " -->
     <div id ='mission' class="callout grid-x primary clearfix ">
       <div class='grid-x grid-padding-x align-spaced align-middle'>
         <div class='cell small-6'>
@@ -55,6 +54,7 @@
       </div>
     </div>
 
+    <!-- This formats the 'services' statements section -->
     <div id='services' class="callout large primary">
       <div id='top-section-services' class='grid-x align-justify align-middle'>
         <img id='multi-vax-gif' class='large-order-1 medium-order-1 small-order-2' src='https://media.giphy.com/media/eCYMDIvccUYqNjTXHr/giphy.gif'>
@@ -74,6 +74,7 @@
       </p>
     </div>
 
+    <!-- This formats the bottom form and the added gif for some flare -->
     <div id='bottom-form' class="card grid-x" >
       <div id='card-divider'class="card-divider align-justify align-middle">
         <h3 id='start-form'>Let's Get Started!</h3>
@@ -99,6 +100,10 @@
             </button>
           </div>
           
+          <!-- This program was meant to take in a zipcode search as well, but 
+            the api we decided to use only took in city names, which forced us to comment the functionality out... 
+            here was that following code-->
+
           <!-- or ...
         
           <div class='grid-container'>
@@ -117,7 +122,7 @@
     </div>
 
     
-
+    <!-- Here we link the jQuery script for our Js... we also link the corresponding JS file  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='./assets/js/scheduler.js'></script>
   </body>
