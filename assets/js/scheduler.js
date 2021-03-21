@@ -1,18 +1,27 @@
 // This is our Javascript:
+var submit = document.getElementById("button");
+var cityInput = document.getElementById("city");
+var stateInput = document.getElementById("state");
+var mapId = document.getElementById("map")
+var cityName = document.getElementById("cityName");
+var stateName = document.getElementById("stateName");
 
-var website = "https://api.vaccinateca.com/v1/locations.json"
-var zip = 92101;
+var website = "https://api.vaccinateca.com/v1/locations.json";
 var myMap; 
+var zip = 92101;
+var cityN = "Riverside";
+var state = "California";
 
-var dataSet = function(url){
+var dataSet = function(url, city, state){
     fetch(url).then(function(response){
         if(response.ok){
             response.json().then(data => {
-                console.log(data)
                 var count = 0;
                 var locat = {};
 
-                myMap = L.map('mapid').setView([data.content[1].Latitude, data.content[1].Longitude], 10)
+                myMap = L.map('map').setView([data.content[1].Latitude, data.content[1].Longitude], 10)
+                cityName.innerHTML = city;
+                stateName.innerHTML = state;
 
                 for(var i = 0; i < data.content.length; i++){
                     count++;
@@ -24,21 +33,13 @@ var dataSet = function(url){
                     if("Availability Info" in data.content[i]){
                         var available = data.content[i]["Availability Info"][0];
                         if(available.includes("Yes")){
-                            
-                                getLocations(zip, address, lat, long, name, locat);
-                            
-                            // console.log(lat)
-                            // console.log(long)
-                            // console.log(name)
-                           
-                            
+                            getLocations(zip, address, lat, long, name, locat, city, state);
                         }
                     }
                     else{
                         continue;
                     }
                 }
-                console.log(locat)
             })
         }
         else{
@@ -47,17 +48,19 @@ var dataSet = function(url){
     })
 }
 
-function getLocations(zipCode, address, lat, long, name, arr){
+function getLocations(zipCode, address, lat, long, name, arr, city, state){
     try{
         if(address) {
-            if(address.includes(zipCode)){//might need a function next here.
-                console.log(address)
-                drawMap(lat, long, name)
+            cityL = city.toLowerCase();
+            var ad = address.toLowerCase();
+            if(ad.includes(cityL)){ 
+                drawMap(lat, long, name, address)
                 arr[name] = {};
                 arr[name]["Address"] = address;
                 arr[name]["Latitude"] = lat;
                 arr[name]["Longitude"] = long;
                 n = false;
+                myMap.setView([lat, long], 10)
             }
         } else {
             console.log("this location does not have an address")
@@ -69,50 +72,31 @@ function getLocations(zipCode, address, lat, long, name, arr){
     }
 }
 
-dataSet(website);// event listener is going to be need to call thsi when someone searchs zipcode.
-
 // Starting from here the maps api section is here.
-
-function drawMap(lat, long, name){
-    console.log("working")
-    //var mymap = L.map('mapid').setView([lat, long], 10);//51.505, -0.09], 13);
-
+function drawMap(lat, long, name, address){
     L.tileLayer(
     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
     ).addTo(myMap);
-
-    console.log("name is", name)
-
     
     try {
-        L.marker([lat, long], { title : "asdf"}).addTo(myMap);
+        var str = "<b>" + name + "</b>" + "<br>" + address;
+
+        // var a = document.createElement("A");
+        // var text = document.createTextNode(address);
+        // a.setAttribute("href", "Https://maps.google.com/?q=" + address)
+        // a.appendChild(text);
+        // document.str.appendChild(a);
+
+        L.marker([lat, long], {title: "city", riseOnHover: true}).addTo(myMap).bindPopup(str);
     } catch(e) {
         console.log("error creating marker", e)
     }
-
-    //const latlong = L.LatLng(lat, long)
-    
-    //var latlng = new L.LatLng(lat, long, 200)
-
-
-    // var lonLat = new OpenLayers.LonLat(lat ,long)
-    //       .transform(
-    //         new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-    //         map.getProjectionObject() // to Spherical Mercator Projection
-    //     );
-    
-    // var marker = new OpenLayer.Layer.Marker("mark");
-    // mymap.addLayer(marker)
-    // marker.addMarker(new OpenLayer.Marker(lonLat));
-    // mymap.setCenter(lonLat, 10)
-
 }
 
-function addMarkers(obj){
+// working on this the value isn't arrpearing correctly it returns null
+document.addEventListener("DOMContentLoaded", function(){
+    dataSet(website, cityInput.value, stateInput.value)
 
-}
-
-
-
+}, false)
 
 

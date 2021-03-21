@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     
     <link rel="stylesheet" href="./assets/css/scheduler.css" />
     <title>Save-A-Shot</title>
@@ -31,7 +37,7 @@
     <div id='main-section' class='callout large'>
         <div class='grid-x grid-margin-x'>
             <div class='cell' id='api-location-results'>
-                <h4 class='text-center'>Here are the closest locations near <span id='city'></span> ,<span id='state'></span> :</h4>
+                <h4 class='text-center'>Here are the closest locations near <span id='cityName'></span> ,<span id='stateName'></span> :</h4>
                 <ul id='list-of-results' class='text-center'>
                     <li>der</li>
                     <li>over der</li>
