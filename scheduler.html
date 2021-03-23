@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-    crossorigin="anonymous"
-    />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
@@ -18,6 +13,7 @@
     <title>Save-A-Shot</title>
   </head>
 
+  <!-- This formats the 'top-bar' nav bar of the page, almost exactly the same as the top bar from the results.html page -->
   <body>
     <div class='top-bar'>
       <div class='top-bar-left'>
@@ -29,13 +25,16 @@
       </div>
   </div>
 
+  <!-- Due to unavailability to track available vaccines outside California, we moved the vaccine Scheduler to the the near top of the page -->
+  <!-- This section formats the available vaccine section -->
   <div id='vaccine-available'class='callout'>
     <h4>Where can I get an appointment?</h4>
     <p>&emsp;The Vaccine Finder Organization has a great all-in-one place to find available vaccinations within your zipcode </p>
     <button id='glow-on-hover' type='button'><a id='v-finder'  href='https://vaccinefinder.org/search/'>Vaccine Finder</a></button>
     <h4> Or</h4>
+    <!-- Here we adjusted the second link on this section, to link every state's/territory's available COVID 19 or government health page -->
     <p>&emsp;Select your State/Territory below to get linked to its vaccination portal </p>
-    <ul id='list-of-states' class="dropdown menu" data-dropdown-menu>
+    <ul id='list-of-states' data-dropdown-menu>
         <ul class="menu grid-x align-center">
           <li><a id='state-button' href='https://alcovidvaccine.gov/'>Alabama</a></li>
           <li><a id='state-button' href ='https://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/VaccineInfo.aspx'>Alaska</a></li>
@@ -102,6 +101,7 @@
     </ul>
   </div>
 
+  <!-- This formats the "why take the vaccine" section, same as results.html -->
   <div id="y-take-it" class='callout'>
     <div class='grid-y grid-margin-y'>
         <h4> Why Take the Vaccine?</h4>
@@ -122,6 +122,7 @@
     </div>
 </div>
 
+<!-- This formats the "other helpful links" section, same as results.html-->
 <div  id='helpful-links' class="callout">
     <div class='grid-y align-middle'>
         <h4>Other Helpful Links</h4>

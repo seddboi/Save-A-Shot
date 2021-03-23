@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-    crossorigin="anonymous"
-    />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" 
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" 
@@ -25,6 +20,7 @@
   </head>
 
   <body>
+      <!-- This formats the 'top-bar' nav bar for the 'in-california' user... equipped with a return to homepage button -->
     <div class='top-bar'>
         <div class='top-bar-left'>
             <h5><strong>Save-A-Shot</strong></h5>
@@ -34,21 +30,19 @@
             <button id='glow-on-hover' type='button'><a id='button' href='index.html'><label id='button-text'>Go Back</label></a></button>
         </div>
     </div>
+
+    <!-- This formats the results section for our search, also has section available for the map that appears -->
     <div id='main-section' class='callout large'>
         <div class='grid-x grid-margin-x'>
             <div class='cell' id='api-location-results'>
                 <h4 class='text-center'>Here are the closest locations near <span id='cityName'></span> ,<span id='stateName'></span> :</h4>
-                <ul id='list-of-results' class='text-center'>
-                    <li>der</li>
-                    <li>over der</li>
-                    <li>ober der</li>
-                    <li>over wer</li>
-                </ul>
+                <ul id='list-of-results' class='text-center'></ul>
                 <div id='map' class='callout primary'></div>
             </div>
         </div>
     </div>
 
+    <!-- This formats the 'why take the vaccine' section of the page... also formats the embedded video, partially -->
     <div id="y-take-it" class='callout'>
         <div class='grid-y grid-margin-y'>
             <h4> Why Take the Vaccine?</h4>
@@ -69,6 +63,7 @@
         </div>
     </div>
 
+    <!-- this formats the 'other helpful links' section, which provides another embedded video as well as some other informational links -->
     <div  id='helpful-links' class="callout">
         <div class='grid-y align-middle'>
             <h4>Helpful Links</h4>
@@ -83,6 +78,8 @@
         </div>  
     </div>
 
+    <!-- This formats the 'vaccine available' section, which provides actual live links to 
+        government/health sites to schedule a vaccine appointment -->
     <div id='vaccine-available'class='callout'>
         <h4>Where can I get an appointment?</h4>
         <p>&emsp;The Vaccine Finder Organization has a great all-in-one place to find available vaccinations within your zipcode </p>

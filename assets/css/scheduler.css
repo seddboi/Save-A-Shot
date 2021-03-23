@@ -2,11 +2,14 @@
     box-sizing: border-box;
 }
 
+/* this applies the blue to light blue gradient to the background of the body */
 body {
     background-image: linear-gradient(185deg, rgb(51, 138, 249),rgb(47, 248, 255));
     background-repeat: no-repeat;
-    height: 100%;}
+    height: 100%;
+}
 
+/* this affixes the orientation of the top navigation bar, all top bars are very similar on each page, in regard to styling */
 .top-bar {
     background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     border: 2px outset rgb(128, 128, 128);
@@ -14,7 +17,8 @@ body {
     border-radius: 10px;;
     margin: 10px;
 }
-
+/* -------------------------------------------- */
+/* Rainbow Hover glow effect taken from https://codepen.io/kocsten/pen/rggjXp provided by author Kocsten*/
 #glow-on-hover {
     width: 150px;
     height: 40px;
@@ -78,10 +82,12 @@ body {
     100% { background-position: 0 0; }
 }
 
+/* -------------------------------------------- */
+
 #reset {
     color: #ffffff;  
 }
-
+/* This adjusts the background of the collection of state buttons and sets the background borders */
 #list-of-states {
     background-image: radial-gradient(circle at center center, rgba(33,33,33,0),rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 1px,transparent 1px, transparent 4px),repeating-linear-gradient(45deg, rgb(56,56,56) 0px, rgb(56,56,56) 5px,transparent 5px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     border: 1px solid rgb(128, 128, 128);
@@ -89,7 +95,7 @@ body {
     border-radius: 10px;
     padding: 10px;
 }
-
+/* these affix the trasnparent outline effect around hovering over the button */
 #state-button {
     background-color:transparent;
     text-decoration: none;
@@ -101,6 +107,7 @@ body {
     outline-style: double;
 }
 
+/* Each section is formatted the same(excluding the navbar), with the same background, margins, padding, size, and same transition duration   */
 #main-section {
     margin-left: 20px;
     margin-right: 20px;
@@ -111,10 +118,12 @@ body {
     transition: 0.2s all ease-in-out;
 }
 
+/* this allows each section to scale itself to be larger when you hover over it */
 #main-section:hover {
     transform: scale(1.02);
 }
 
+/* This formats the section that the map appears */
 #map {
     margin: 10px;
     border: 2px solid #666;
@@ -149,6 +158,9 @@ body {
     transform: scale(1.02);
 }
 
+/* This formats the embedded videos that appear on the page */
+/* Link to CDC video https://www.youtube.com/embed/6Wqk2CrMrh8 */
+/* Link to Stanford Medicine video https://www.youtube.com/embed/rAj38E7vrS8 */
 .video-container {
     position: relative;
     width: 100%;
