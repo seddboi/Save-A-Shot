@@ -123,6 +123,14 @@ body {
     transform: scale(1.02);
 }
 
+#cityName {
+    text-transform: capitalize;
+}
+
+#stateName {
+    text-transform: capitalize;
+}
+
 /* This formats the section that the map appears */
 #map {
     margin: 10px;
