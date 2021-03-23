@@ -13,6 +13,6 @@ The interface of the program was created with a base format of the Foundation fr
 
 ## Links to Our Sources Github and Live Site
 
-Github Repo: 
+Github Repo: https://github.com/seddboi/Save-A-Shot
 
-Live Site: 
+Live Site: https://seddboi.github.io/Save-A-Shot/
