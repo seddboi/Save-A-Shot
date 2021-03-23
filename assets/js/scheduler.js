@@ -25,7 +25,9 @@ $('#button').on('click', function(event){
     var citySearch = $('#city').val().toLowerCase();
     var stateArrayCheck = namesOfStates.includes(stateSearch);
     var cityArrayCheck = cityNamesLowercase.includes(citySearch);
-
+    // This checks the validity of the entries when searched
+    // It first checks the validity of a correct city, if true, then it check for a valid state
+    // the resulting page is determined by the State/territory entry
     if (!cityArrayCheck) {
         alert('Please enter a valid city');
     } else {
@@ -127,7 +129,7 @@ submit.addEventListener("click", function(){
     localStorage.setItem("cityState", JSON.stringify({"city":cityInput.value, "state":stateInput.value}))
 })
 
-// window.addEventListener("load", function(){
-//     dataSet(website)
-// })
+window.addEventListener("load", function(){
+    dataSet(website)
+})
 
